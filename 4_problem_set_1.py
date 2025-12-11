@@ -111,6 +111,16 @@ def fibonacci(n):
 for i in range(1,10):
     print(fibonacci(i))
 
+
+def fibonachi(n):
+    if n==1:
+        return 0
+    if n==2:
+        return 1
+    return fibonachi(n-1)+fibonachi(n-2)
+for i in range(1,10):
+    print(fibonacci)
+
 # ### **Problem 10: Pattern Printing**
 
 # Ask the user for a number **n**, then print a pattern of stars where the first row has 1 star, the second has 2, and so on until row n.
