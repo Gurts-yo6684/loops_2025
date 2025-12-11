@@ -29,6 +29,17 @@ print("The sum of numbers from1 to", n, "is", "total sum")
 # *(Example: factorial of 5 is 120)
 
 
+def factorial(n):
+
+    factorial = 1
+
+    for i in range(n):
+        factorial*=i+1
+
+    return factorial
+print(factorial(0))
+
+
 # ### **Problem 4: Count Vowels**
 
 # Ask the user for a string. Count and print how many **vowels (a, e, i, o, u)** are in the string.
@@ -38,12 +49,29 @@ print("The sum of numbers from1 to", n, "is", "total sum")
 
 # Ask the user for a number **n**, then print all **even numbers** from 2 up to n.
 
+n = int(input("Enter a number: "))
+print("Even numbers from 2 to", n, ":")
+for unmber in range(2, n+ 1,2):
+    print(number)
 
+list_even_numbers = list(range(1, 45))
+for number in list_even_numbers:
+    #if the number is even, print it
+    if number % 2==0:
+        print("even number", number)
+    else:
+        print("odd number, skipping,", number)
 
 # ### **Problem 6: Reverse a String**
 
 # Ask the user for a string, then print the string **backwards**.
-
+name = input("What is your name")
+reversed_name = ""
+for char in name:
+    reversed_name = char + reversed_name
+    #prepend each character to reversed_name
+print("Reversed stront:", reversed_name)
+print(reversed_name[::-1])
 
 
 # ### **Problem 7: Multiplication Table**
@@ -63,8 +91,25 @@ print("The sum of numbers from1 to", n, "is", "total sum")
 # ### **Problem 9: Fibonacci Sequence**
 
 # Ask the user for a number **n**, then print the first **n numbers** of the Fibonacci sequence.
+# recurtion means a function calls itself
+# an ecxampole of recurtion id the fibinachi sequence
+def car_price(n):
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return car_price(n-1) + car_price(n-2)
 
 
+
+
+def fibonacci(n):
+    if n in [1,2]:
+        return 1
+    return fibonacci(n-1)+fibonacci(n-2)
+for i in range(1,10):
+    print(fibonacci(i))
 
 # ### **Problem 10: Pattern Printing**
 
